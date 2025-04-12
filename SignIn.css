@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "DM Sans", sans-serif;
+}
+
+body {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  color: var(--byway-black);
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  padding: 20px 2.5rem;
+  border-bottom: 1px solid #000;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 3rem;
+}
+
+header nav input {
+  width: 622px;
+  height: 40px;
+  padding-left: 40px;
+}
+
+header nav input::placeholder {
+  font-size: 14px;
+  font-weight: 500;
+}
+header nav div:first-of-type {
+  position: relative;
+}
+
+header nav div:first-of-type .bx-search-alt-2 {
+  font-size: 16px;
+  color: #334155;
+  position: absolute;
+  top: 28%;
+  left: 15px;
+}
+
+header nav div:first-of-type input {
+  border: 1px solid #334155;
+  border-radius: 8px;
+}
+
+header nav div:first-of-type input:focus {
+  outline: none;
+}
+header nav div:last-of-type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+
+header nav div:last-of-type .bx-cart-alt {
+  font-size: 24px;
+}
+
+header nav div:last-of-type button:first-of-type {
+  width: 61px;
+  height: 40px;
+  background-color: transparent;
+  border: 1px solid #334155;
+  transition: all 0.3s ease-in-out;
+}
+
+header nav div:last-of-type button:first-of-type:hover {
+  background-color: #334155;
+  color: #fff;
+  cursor: pointer;
+}
+
+header nav div:last-of-type button:last-of-type {
+  width: 61px;
+  height: 40px;
+  color: #fff;
+  background-color: #334155;
+  transition: all 0.3s ease-in-out;
+}
+
+header nav div:last-of-type button:last-of-type:hover {
+  background-color: transparent;
+  color: #334155;
+  cursor: pointer;
+}
+
+/* hero styling */
+
+main section {
+  display: flex;
+  justify-content: space-between;
+}
+main section #signindts {
+  display: flex;
+  flex-direction: column;
+  width: 692px;
+  padding-block: 12rem;
+  padding-inline: 10rem;
+}
+main section #signindts h2 {
+  text-align: center;
+  color: #0f172a;
+}
+main section #signindts h5 {
+  color: #0f172a;
+  margin-top: 15px;
+}
+form input {
+  width: 100%;
+  height: 2.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding-inline: 16px;
+}
+input::placeholder {
+  color: #94a3b8;
+  font-size: 16px;
+  font-weight: 400px;
+  line-height: 160%;
+}
+main section #signindts > button {
+  background-color: #020617;
+  color: #fff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 124px;
+  height: 40px;
+  /* padding: 10px 24px; */
+  margin-top: 20px;
+}
+button .bx-right-arrow-alt {
+  width: 24px;
+  height: 24px;
+}
+main section #signindts > p {
+  margin-block: 15px;
+  text-align: center;
+  font-weight: 400;
+  color: #94a3b8;
+  font-size: 14px;
+}
+#socialsdiv {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+#socialsdiv button {
+  width: 125px;
+  height: 50px;
+  background-color: transparent;
+  border: 1px solid #b2b5c4;
+}
+
+/* MEDIA QUERY */
+
+@media (max-width: 700px) {
+  ul,
+  li {
+    display: none;
+  }
+  header {
+    padding: 20px 35px;
+  }
+  header nav div:first-of-type input {
+    display: none;
+  }
+  header nav div:first-of-type .bx-search-alt-2 {
+    display: none;
+  }
+  header nav div:last-of-type {
+    display: none;
+  }
+  #toggle_menu {
+    cursor: pointer;
+    display: block;
+  }
+  #toggle_menu i {
+    font-size: 40px;
+  }
+  main section {
+    flex-direction: column;
+  }
+  main section #signindts {
+    width: 300px;
+    padding: 35px;
+  }
+  #Signinimgdiv {
+    width: 100%;
+    height: 200px;
+  }
+  #Signinimgdiv img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+  ul,
+  li {
+    display: none;
+  }
+  header {
+    padding: 20px 4rem;
+  }
+  header nav div:first-of-type input {
+    display: none;
+  }
+  header nav div:first-of-type .bx-search-alt-2 {
+    display: none;
+  }
+  header nav div:last-of-type {
+    display: none;
+  }
+  #toggle_menu {
+    cursor: pointer;
+    display: block;
+  }
+  #toggle_menu i {
+    font-size: 40px;
+  }
+  main section {
+    flex-direction: column;
+  }
+  main section #signindts {
+    justify-content: center;
+    width: 500px;
+    padding: 100px;
+  }
+}

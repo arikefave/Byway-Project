@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "DM Sans", sans-serif;
+}
+
+body {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  color: var(--byway-black);
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  padding: 20px 2.5rem;
+  border-bottom: 1px solid #000;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 3rem;
+}
+
+header nav input {
+  width: 622px;
+  height: 40px;
+  padding-left: 40px;
+}
+
+header nav input::placeholder {
+  font-size: 14px;
+  font-weight: 500;
+}
+header nav div:first-of-type {
+  position: relative;
+}
+
+header nav div:first-of-type .bx-search-alt-2 {
+  font-size: 16px;
+  color: #334155;
+  position: absolute;
+  top: 28%;
+  left: 15px;
+}
+
+header nav div:first-of-type input {
+  border: 1px solid #334155;
+  border-radius: 8px;
+}
+
+header nav div:first-of-type input:focus {
+  outline: none;
+}
+header nav div:last-of-type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+
+header nav div:last-of-type .bx-cart-alt {
+  font-size: 24px;
+}
+
+header nav div:last-of-type button:first-of-type {
+  width: 61px;
+  height: 40px;
+  background-color: transparent;
+  border: 1px solid #334155;
+  transition: all 0.3s ease-in-out;
+}
+
+header nav div:last-of-type button:first-of-type:hover {
+  background-color: #334155;
+  color: #fff;
+  cursor: pointer;
+}
+
+header nav div:last-of-type button:last-of-type {
+  width: 61px;
+  height: 40px;
+  color: #fff;
+  background-color: #334155;
+  transition: all 0.3s ease-in-out;
+}
+
+header nav div:last-of-type button:last-of-type:hover {
+  background-color: transparent;
+  color: #334155;
+  cursor: pointer;
+}
+/* Hero Styling */
+main section {
+  display: flex;
+  justify-content: space-between;
+}
+main section #signupdts {
+  display: flex;
+  flex-direction: column;
+  width: 692px;
+  padding-block: 12rem;
+  padding-inline: 10rem;
+}
+main section #signupdts h2 {
+  text-align: center;
+  color: #0f172a;
+}
+main section #signupdts h5 {
+  color: #0f172a;
+  margin-top: 15px;
+}
+form input {
+  width: 100%;
+  height: 2.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding-inline: 16px;
+}
+#signupfullnm {
+  display: flex;
+  flex-direction: column;
+}
+#signupfullnminput {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+#signuppsw {
+  display: flex;
+  justify-content: space-between;
+}
+input::placeholder {
+  color: #94a3b8;
+  font-size: 16px;
+  font-weight: 400px;
+  line-height: 160%;
+}
+main section #signupdts > button {
+  background-color: #020617;
+  color: #fff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  height: 40px;
+  padding: 10px 24px;
+  margin-block: 20px;
+}
+button .bx-right-arrow-alt {
+  color: red;
+  /* width: 16px;
+  height: 12px; */
+}
+main section #signupdts > p {
+  margin-block: 15px;
+  text-align: center;
+  font-weight: 400;
+  color: #94a3b8;
+  font-size: 14px;
+}
+#socialsdiv {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+#socialsdiv button {
+  width: 125px;
+  height: 50px;
+  background-color: transparent;
+  border: 1px solid #b2b5c4;
+}
+
+/* MEDIA QUERY */
+
+@media (max-width: 700px) {
+  ul,
+  li {
+    display: none;
+  }
+  header {
+    padding: 20px 35px;
+  }
+  header nav div:first-of-type input {
+    display: none;
+  }
+  header nav div:first-of-type .bx-search-alt-2 {
+    display: none;
+  }
+  header nav div:last-of-type {
+    display: none;
+  }
+  #toggle_menu {
+    cursor: pointer;
+    display: block;
+  }
+  #toggle_menu i {
+    font-size: 40px;
+  }
+  main section {
+    flex-direction: column;
+  }
+  #SignUpimgdiv {
+    width: 310px;
+    height: 200px;
+  }
+  #SignUpimg {
+    width: 100%;
+    height: 200px;
+  }
+  main section #signupdts {
+    width: 310px;
+    margin: auto;
+    padding: 30px;
+  }
+  #signupfullnminput {
+    flex-direction: column;
+  }
+  #signuppsw {
+    flex-direction: column;
+  }
+  #socialsdiv {
+    justify-content: space-between;
+    gap: 20px;
+    padding-inline: 10px;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+  ul,
+  li {
+    display: none;
+  }
+  header {
+    padding: 20px 4rem;
+  }
+  header nav div:first-of-type input {
+    display: none;
+  }
+  header nav div:first-of-type .bx-search-alt-2 {
+    display: none;
+  }
+  header nav div:last-of-type {
+    display: none;
+  }
+  #toggle_menu {
+    cursor: pointer;
+    display: block;
+  }
+  #toggle_menu i {
+    font-size: 40px;
+  }
+  main section {
+    flex-direction: column;
+  }
+  #SignUpimgdiv {
+    width: 768px;
+    height: 370px;
+  }
+  #SignUpimg {
+    width: max-content;
+    height: 100%;
+  }
+  main section #signupdts {
+    width: 600px;
+    margin: auto;
+    padding: 35px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1260px) {
+  header {
+    padding: 20px 1.5rem;
+  }
+}
+
+@media (min-width: 1025px) {
+}
