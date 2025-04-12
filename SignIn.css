@@ -104,75 +104,95 @@ header nav div:last-of-type button:last-of-type:hover {
 
 /* hero styling */
 
-main section {
-  display: flex;
-  justify-content: space-between;
+main {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  height: 100vh;
 }
-main section #signindts {
+main section:first-of-type {
   display: flex;
   flex-direction: column;
-  width: 692px;
-  padding-block: 12rem;
-  padding-inline: 10rem;
-}
-main section #signindts h2 {
-  text-align: center;
-  color: #0f172a;
-}
-main section #signindts h5 {
-  color: #0f172a;
-  margin-top: 15px;
-}
-form input {
-  width: 100%;
-  height: 2.5rem;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  padding-inline: 16px;
-}
-input::placeholder {
-  color: #94a3b8;
-  font-size: 16px;
-  font-weight: 400px;
-  line-height: 160%;
-}
-main section #signindts > button {
-  background-color: #020617;
-  color: #fff;
-  border-radius: 8px;
-  display: flex;
   align-items: center;
   justify-content: center;
-  width: 124px;
-  height: 40px;
-  /* padding: 10px 24px; */
+}
+main section:first-of-type h2 {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 130%;
+  text-align: center;
+}
+main section:first-of-type form {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+}
+main section:first-of-type form div:first-of-type div {
   margin-top: 20px;
 }
-button .bx-right-arrow-alt {
-  width: 24px;
-  height: 24px;
+main section:first-of-type label {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 160%;
+  color: #0f172a;
 }
-main section #signindts > p {
-  margin-block: 15px;
-  text-align: center;
+main section:first-of-type form input {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  margin-top: 5px;
+  padding: 2px 15px;
+  width: 500px;
+  height: 50px;
+}
+main section:first-of-type form input::placeholder {
+  color: #94a3b8;
   font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+}
+main section:first-of-type #signinbtn {
+  color: #fff;
+  background-color: #020617;
+  border: none;
+  border-radius: 8px;
+  margin-block: 20px;
+  padding: 8px;
+  width: 100px;
+  height: 40px;
+}
+main section:first-of-type #signindiv2 {
+  position: relative;
+  text-align: center;
+  margin: 30px 0px;
+  width: 100%;
+}
+main section:first-of-type #signindiv2 hr {
+  border-top: 1px solid #94a3b8;
+  width: 100%;
+}
+main section:first-of-type #signindiv2 span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  padding-inline: 10px;
+  background-color: #fff;
   color: #94a3b8;
   font-size: 14px;
+  font-weight: 400;
 }
-#socialsdiv {
-  width: 100%;
+main section:first-of-type #signinsocials {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
+  justify-content: space-between;
+  width: 100%;
 }
-#socialsdiv button {
-  width: 125px;
-  height: 50px;
+main section:first-of-type #signinsocials button {
   background-color: transparent;
   border: 1px solid #b2b5c4;
+  border-radius: 8px;
+  width: 180px;
+  height: 45px;
 }
-
 /* MEDIA QUERY */
 
 @media (max-width: 700px) {
@@ -199,20 +219,24 @@ main section #signindts > p {
   #toggle_menu i {
     font-size: 40px;
   }
-  main section {
-    flex-direction: column;
+  main {
+    display: grid;
+    grid-template-columns: none;
+    height: 100vh;
   }
-  main section #signindts {
-    width: 300px;
-    padding: 35px;
-  }
-  #Signinimgdiv {
+  main section:last-of-type {
     width: 100%;
     height: 200px;
   }
-  #Signinimgdiv img {
+  main section:last-of-type img {
     width: 100%;
     height: 100%;
+  }
+  main section:first-of-type h2 {
+    padding-top: 2rem;
+  }
+  main section:first-of-type form {
+    padding-bottom: 2rem;
   }
 }
 
@@ -240,12 +264,23 @@ main section #signindts > p {
   #toggle_menu i {
     font-size: 40px;
   }
-  main section {
-    flex-direction: column;
+  main {
+    display: grid;
+    grid-template-columns: none;
+    height: 100vh;
   }
-  main section #signindts {
-    justify-content: center;
-    width: 500px;
-    padding: 100px;
+  main section:last-of-type {
+    width: 100%;
+    height: 400px;
+  }
+  main section:last-of-type img {
+    width: 100%;
+    height: 100%;
+  }
+  main section:first-of-type h2 {
+    padding-top: 2rem;
+  }
+  main section:first-of-type form {
+    padding-bottom: 2rem;
   }
 }

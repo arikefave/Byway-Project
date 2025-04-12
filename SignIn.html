@@ -39,21 +39,35 @@
     </header>
     <main>
       <section>
-        <div id="signindts">
-          <h2>Sign in to your account</h2>
-          <form>
-            <h5>Email</h5>
-            <input type="email" placeholder="Username or Email ID" />
-            <h5>Password</h5>
-            <input type="password" placeholder="Enter Password" />
-          </form>
-          <button>
-            Sign In
-            <i class="bx bx-right-arrow-alt"></i>
-          </button>
-          <p>Sign up with</p>
-          <!-- social buttons -->
-          <div id="socialsdiv">
+        <h2>Sign in to your account</h2>
+        <form>
+          <div id="inputdiv">
+            <div>
+              <label for="emailinput">Email</label>
+              <input
+                type="email"
+                id="emailinput"
+                placeholder="Username or Email ID"
+              />
+            </div>
+            <div>
+              <label for="pswinput">Password</label>
+              <input
+                type="password"
+                id="pswinput"
+                placeholder="Enter Password"
+              />
+            </div>
+            <button id="signinbtn">
+              Sign In
+              <i class="bx bx-right-arrow-alt"></i>
+            </button>
+          </div>
+          <div id="signindiv2">
+            <hr />
+            <span>Sign in with</span>
+          </div>
+          <div id="signinsocials">
             <button>
               <img src="/Images/facebook.svg" alt="Facebook Logo" />
             </button>
@@ -64,10 +78,10 @@
               <img src="/Images/microsoft.svg" alt="Microsoft Logo" />
             </button>
           </div>
-        </div>
-        <div id="Signinimgdiv">
-          <img src="/Images/Sign In Img.svg" alt="SignInImg" />
-        </div>
+        </form>
+      </section>
+      <section>
+        <img src="/Images/Sign In Img.svg" alt="Sign In Img" />
       </section>
     </main>
   </body>

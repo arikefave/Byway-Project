@@ -102,89 +102,103 @@ header nav div:last-of-type button:last-of-type:hover {
   cursor: pointer;
 }
 /* Hero Styling */
-main section {
-  display: flex;
-  justify-content: space-between;
+main {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  height: 100vh;
 }
-main section #signupdts {
+main section:last-of-type {
   display: flex;
   flex-direction: column;
-  width: 692px;
-  padding-block: 12rem;
-  padding-inline: 10rem;
+  align-items: center;
+  justify-content: center;
 }
-main section #signupdts h2 {
+main section:last-of-type h2 {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 130%;
   text-align: center;
+}
+main section:last-of-type form {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+}
+main section:last-of-type label {
+  font-weight: 600px;
+  font-size: 18px;
+  line-height: 160%;
   color: #0f172a;
 }
-main section #signupdts h5 {
-  color: #0f172a;
-  margin-top: 15px;
-}
-form input {
-  width: 100%;
-  height: 2.5rem;
+main section:last-of-type form input {
   border: 1px solid #e2e8f0;
   border-radius: 8px;
-  padding-inline: 16px;
+  margin-top: 5px;
+  padding: 2px 15px;
+  width: 550px;
+  height: 50px;
 }
-#signupfullnm {
-  display: flex;
-  flex-direction: column;
-}
-#signupfullnminput {
-  display: flex;
-  gap: 10px;
-  width: 100%;
-}
-#signuppsw {
-  display: flex;
-  justify-content: space-between;
-}
-input::placeholder {
+main section:last-of-type form input::placeholder {
   color: #94a3b8;
+  font-weight: 400;
   font-size: 16px;
-  font-weight: 400px;
   line-height: 160%;
 }
-main section #signupdts > button {
-  background-color: #020617;
-  color: #fff;
-  border-radius: 8px;
+main section:last-of-type form #fullname div {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: max-content;
-  height: 40px;
-  padding: 10px 24px;
+  gap: 20px;
+}
+/* main section:last-of-type form #password {
+  display: flex;
+  width: 100%;
+}
+#EnterPassword #ConfirmPassword {
+  width: 50%;
+} */
+main section:last-of-type #signupbtn {
+  color: #fff;
+  background-color: #020617;
+  border: none;
+  border-radius: 8px;
   margin-block: 20px;
+  padding: 8px;
+  width: 170px;
+  height: 40px;
 }
-button .bx-right-arrow-alt {
-  color: red;
-  /* width: 16px;
-  height: 12px; */
-}
-main section #signupdts > p {
-  margin-block: 15px;
+main section:last-of-type #signupdiv2 {
+  position: relative;
   text-align: center;
-  font-weight: 400;
+  margin: 30px 0px;
+  width: 100%;
+}
+main section:last-of-type #signupdiv2 hr {
+  border-top: 1px solid #94a3b8;
+  width: 100%;
+}
+main section:last-of-type #signupdiv2 span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  padding-inline: 10px;
+  background-color: #fff;
   color: #94a3b8;
   font-size: 14px;
+  font-weight: 400;
 }
-#socialsdiv {
-  width: 100%;
+ain section:last-of-type #signupsocials {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
+  justify-content: space-between;
+  width: 100%;
 }
-#socialsdiv button {
-  width: 125px;
-  height: 50px;
+main section:last-of-type #signupsocials button {
   background-color: transparent;
   border: 1px solid #b2b5c4;
+  border-radius: 8px;
+  width: 180px;
+  height: 45px;
 }
-
 /* MEDIA QUERY */
 
 @media (max-width: 700px) {
@@ -211,32 +225,33 @@ main section #signupdts > p {
   #toggle_menu i {
     font-size: 40px;
   }
-  main section {
-    flex-direction: column;
+  main {
+    display: grid;
+    grid-template-columns: none;
+    height: 100vh;
   }
-  #SignUpimgdiv {
-    width: 310px;
-    height: 200px;
-  }
-  #SignUpimg {
+  main section:first-of-type {
     width: 100%;
     height: 200px;
   }
-  main section #signupdts {
-    width: 310px;
-    margin: auto;
-    padding: 30px;
+  main section:first-of-type img {
+    width: 100%;
+    height: 100%;
   }
-  #signupfullnminput {
+  main section:last-of-type form {
+    width: 300px;
+  }
+  main section:last-of-type form #fullname div {
     flex-direction: column;
   }
-  #signuppsw {
-    flex-direction: column;
+  main section:last-of-type form input {
+    width: 100%;
   }
-  #socialsdiv {
+  main section:last-of-type #signupsocials {
+    width: 100%;
+    display: flex;
+    align-items: center;
     justify-content: space-between;
-    gap: 20px;
-    padding-inline: 10px;
   }
 }
 
@@ -264,29 +279,32 @@ main section #signupdts > p {
   #toggle_menu i {
     font-size: 40px;
   }
-  main section {
-    flex-direction: column;
+  main {
+    display: grid;
+    grid-template-columns: none;
+    height: 100vh;
   }
-  #SignUpimgdiv {
-    width: 768px;
-    height: 370px;
+  main section:first-of-type {
+    width: 100%;
+    height: 400px;
   }
-  #SignUpimg {
-    width: max-content;
+  main section:first-of-type img {
+    width: 100%;
     height: 100%;
   }
-  main section #signupdts {
-    width: 600px;
-    margin: auto;
-    padding: 35px;
+  main section:last-of-type form {
+    width: 700px;
   }
-}
-
-@media (min-width: 1025px) and (max-width: 1260px) {
-  header {
-    padding: 20px 1.5rem;
+  main section:last-of-type form #fullname div {
+    flex-direction: column;
   }
-}
-
-@media (min-width: 1025px) {
+  main section:last-of-type form input {
+    width: 100%;
+  }
+  main section:last-of-type #signupsocials {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }

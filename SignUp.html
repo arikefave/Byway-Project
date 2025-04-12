@@ -39,42 +39,54 @@
     </header>
     <!-- hero sctn -->
     <main>
+      <section><img src="/Images/Sign Up Img.svg" alt="Sign Up Img" /></section>
       <section>
-        <div id="SignUpimgdiv">
-          <img src="/Images/Sign Up Img.svg" alt="Sign Up Img" id="SignUpimg" />
-        </div>
-        <div id="signupdts">
-          <h2>Create Your Account</h2>
-          <form>
-            <div id="signupfullnm">
-              <h5>Full Name</h5>
-              <div id="signupfullnminput">
-                <input type="text" placeholder="First Name" />
-                <input type="text" placeholder="Last Name" />
+        <h2>Create Your Account</h2>
+        <form>
+          <div>
+            <div id="fullname">
+              <label for="First Name">Full Name</label>
+              <div>
+                <input type="text" id="First Name" placeholder="First Name" />
+                <input type="text" id="Last Name" placeholder="Last Name" />
               </div>
             </div>
-            <h5>Username</h5>
-            <input type="text" placeholder="Username" />
-            <h5>Email</h5>
-            <input type="email" placeholder="Email ID" />
-            <div id="signuppsw">
+            <div>
+              <label for="Username">Username</label>
+              <input type="text" id="Username" placeholder="Username" />
+            </div>
+            <div>
+              <label for="Email ID">Email</label>
+              <input type="email" id="Email ID" placeholder="Email ID" />
+            </div>
+            <div id="password">
               <div>
-                <h5>password</h5>
-                <input type="password" placeholder="Enter Password" />
+                <label for="Enter Password">Password</label>
+                <input
+                  type="password"
+                  id="EnterPassword"
+                  placeholder="Enter Password"
+                />
               </div>
               <div>
-                <h5>Confirm Password</h5>
-                <input type="password" placeholder="Confirm Password" />
+                <label for="Confirm Password">Confirm Password</label>
+                <input
+                  type="password"
+                  id="ConfirmPassword"
+                  placeholder="Confirm Password"
+                />
               </div>
             </div>
-          </form>
-          <button>
-            Create Account
-            <i class="bx bx-right-arrow-alt" width="100px" height="12px"></i>
-          </button>
-          <p>Sign up with</p>
-          <!-- social buttons -->
-          <div id="socialsdiv">
+            <button id="signupbtn">
+              Create Account
+              <i class="bx bx-right-arrow-alt"></i>
+            </button>
+          </div>
+          <div id="signupdiv2">
+            <hr />
+            <span>Sign in with</span>
+          </div>
+          <div id="signupsocials">
             <button>
               <img src="/Images/facebook.svg" alt="Facebook Logo" />
             </button>
@@ -85,7 +97,7 @@
               <img src="/Images/microsoft.svg" alt="Microsoft Logo" />
             </button>
           </div>
-        </div>
+        </form>
       </section>
     </main>
   </body>
